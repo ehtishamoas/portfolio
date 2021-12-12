@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> <!-- for social Media icons -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="app.js" defer></script>
+  </head>
+  <body>
+
+<!---Social Media Icons ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="topNav">
+      <div class="navButtons">
+        <div class="buttonStyle" id="homeButton" > Home </div>
+        <div class="buttonStyle" id="portfolioNavButton" > Portfolio </div>
+      </div>
+      <ul class="socialMedia">
+        <li>
+          <a href="https://www.facebook.com/ehtisham.ulhaq.3954">
+            <i class="fab fa-facebook-f icon"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ehtisham40"><i class="fab fa-twitter icon"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/ehtisham_oas/"><i class="fab fa-instagram icon"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ehtisham-ul-haq-7a98b0138/"><i class="fab fa-linkedin icon"></i></a>
+        </li>
+      </ul>
+    </div>
+
+<!---Home page Contents ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="wrapper" id="wrapper">
+
+      <div class="htmlContainer1">
+
+        <pre class="code"><span style="color:silver">&lt;</span><span style="color:#CB4154">html</span><span style="color:silver">&gt;</span>
+
+  <span style="color:silver">&lt;</span><span style="color:#CB4154">head</span><span style="color:silver">&gt;</span>
+
+      <span style="color:silver">&lt;</span><span style="color:#CB4154">title</span><span style="color:silver">&gt;</span><span style="color:silver">My Portfolio</span><span style="color:silver">&lt;/</span><span style="color:#CB4154">title</span><span style="color:silver">&gt;</span>
+
+      <span style="color:silver">&lt;</span><span style="color:#CB4154">link</span> <span style="color:#f8a33b">rel</span><span style="color:silver">=</span><span style="color:#85a865">"stylesheet"</span> <span style="color:#f8a33b">href</span><span style="color:silver">=</span><span style="color:#85a865">"style.css"</span><span style="color:silver">&gt;</span>
+
+  <span style="color:silver">&lt;/</span><span style="color:#CB4154">head</span><span style="color:silver">&gt;</span>
+
+  <span style="color:silver">&lt;</span><span style="color:#CB4154">body</span><span style="color:silver">&gt;</span>
+
+      <span style="color:silver">&lt;</span><span style="color:#CB4154">h1</span> <span style="color:#f8a33b">class</span><span style="color:silver">=</span><span style="color:#85a865">"name"</span><span style="color:silver">&gt;</span></pre>
+
+        <div class="name">
+          <ul class="nameLetters">
+            <li>
+              <input type="checkbox" />
+              <div class="letter">E</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">H</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">T</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">I</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">S</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">H</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">A</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div class="letter">M</div>
+            </li>
+          </ul>
+        </div>
+        <pre class="code">      <span style="color:silver">&lt;/</span><span style="color:#CB4154">h1</span><span style="color:silver">&gt;</span>
+
+      <span style="color:silver">&lt;</span><span style="color:#CB4154">script</span><span style="color:silver">&gt;</span>
+        </pre>
+
+      </div>
+
+      <pre class="code" id="typewriter">
+        <span style="color:#CB4154">document</span><span style="color:silver">.</span><span style="color:#6495ED">getElementById</span><span style="color:silver">(</span><span style="color:#85a865">"portfolioButton"</span><span style="color:silver">).</span><span style="color:#6495ED">addEventListener</span><span style="color:silver">(</span><span style="color:#85a865">'click'</span><span style="color:silver">, showPortfolio);</span></pre>
+
+      <div class="buttonWrap">
+        <div class="buttonStyle" id="portfolioButton">Portfolio</div>
+      </div>
+
+      <div class="htmlContainer2">
+        <pre class="code">
+
+      <span style="color:silver">&lt;/</span><span style="color:#CB4154">script</span><span style="color:silver">&gt;</span>
+
+  <span style="color:silver">&lt;/</span><span style="color:#CB4154">body</span><span style="color:silver">&gt;</span>
+
+<span style="color:silver">&lt;/</span><span style="color:#CB4154">html</span><span style="color:silver">&gt;</span></pre>
+      </div>
+
+    </div>
+
+<!---Portfolio ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="portfolioWrapper" id="portfolioWrapper">
+      <div class="portfolioContainer" id="portfolioContainer">
+        <div class="mff" id="mff">
+          <div class="portfolioText" id="portfolioText">Film Premiere Website</div>
+        </div>
+        <div class="webComic" id="webComic">
+          <div class="portfolioText" id="portfolioText">Web Comic</div>
+        </div>
+        <div class="portfolio" id="portfolio">
+          <div class="explainer" id="explainer"><span>Portfolio</span></div>
+          <div class="portfolioText" id="portfolioText">My Portfolio</div>
+        </div>
+        <div class="webAudio" id="webAudio">
+          <div class="portfolioText" id="portfolioText">Radio Horror Story </div>
+        </div>
+        <div class="webVideo" id="webVideo">
+          <div class="portfolioText" id="portfolioText">Restaurant Film</div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="projectsGrid" id="projectsGrid">
+
+      <div class="projectContainer" id="project1Container">
+        <p class="projectTitle" id="mffTitle"> Lending a Hand </p>
+        <a href="https://ehtishamoas.github.io/index.html" class="projectLink" id="weblink">Go to the Project Website</a>
+        <div class="instructions" id="insP1">
+          click on the left hand to see the project description
+        </div>
+        <div class="projectCanvas" id="project1Canvas">
+          <img src="images/hand1.png" alt="hand image" class="movableObject" id="hand1">
+          <div class="projectDescription" id="project1Description">
+            <p class="desText">In this project, I have created a website that houses and debuts our film with the title: Lending a Hand. The film teaches about problem solving by being compassionate and offering help whenever possible. So, my goal was to incorporate our film's main message with the website's design.</p>
+            <a href="https://github.com/ehtishamoas/ehtishamoas.github.io" class="projectLink" id="docLink"> Find out more </a>
+          </div>
+          <img src="images/hand2.png" alt="hand image" class="hand2" id="hand2">
+        </div>
+      </div>
+
+
+
+      <div class="projectContainer" id="project2Container">
+        <p class="projectTitle" id="comicTitle"> Aquarium Comic </p>
+        <a href="https://dweggyness.github.io/CommLab-Assignment2/" class="projectLink" id="weblink">Go to the Project Website</a>
+        <div class="instructions" id="insP2">
+          click on the axolotl to see the project description
+        </div>
+        <div class="projectCanvas" id="project2Canvas">
+          <img src="images/axolotl.png" alt="axolotl image" class="movableObject" id="axolotl">
+          <div class="projectDescription" id="project2Description">
+            <p class="desText">In this project, we have created an interactive comic within a website. This short comic is centered around an aquarium, where an axolotl named Moby has arrived. He was excited to meet the inhabitants of this new aquarium, but they were all sad about their life in an aquarium, wishing for an escape. It is shown to the readers that the aquarium glass is fragile and can break even on knocking. The readers can then choose to break the glass by simulating knocking effect using mouse. This way, the reader would help the inhabitants to get freedom from the aquarium as per they wished. But is this really what they wished for?</p>
+            <a href="https://github.com/dweggyness/CommLab-Assignment2" class="projectLink" id="docLink"> Find out more </a>
+          </div>
+          <img src="images/fishtank.png" alt="fishtank Image" class="tank" id="tank">
+        </div>
+      </div>
+
+
+
+      <div class="projectContainer" id="project3Container">
+        <p class="projectTitle" id="webAudioTitle"> Story of the Unusual </p>
+        <a href="https://daniaezz.github.io/unusual/" class="projectLink" id="weblink">Go to the Project Website</a>
+        <div class="instructions" id="insP3">
+          click on the ghost to see the project description
+        </div>
+        <div class="projectCanvas" id="project3Canvas">
+          <img src="images/ghost2.png" alt="ghost image" class="movableObject" id="ghost">
+          <div class="projectDescription" id="project3Description">
+            <p class="desText">In this project, we made an old school radio show that is a blend of horror and a satire-comedy genre. Our short horror story was set at NYUAD. The website that housed and premiered the horror story was designed as a vintage portable radio and provided a unique touch of interactivity for the audience.</p>
+            <a href="https://github.com/daniaezz/unusual" class="projectLink" id="docLink"> Find out more </a>
+          </div>
+          <iframe src="https://giphy.com/embed/ifN6FURePshJBnUhj6" width="200" height="200" frameBorder="0" class="radioGif" id="radioGif"></iframe>
+        </div>
+      </div>
+
+
+
+      <div class="projectContainer" id="project4Container">
+        <p class="projectTitle" id="webVideoTitle"> Faces Behind D2 </p>
+        <a href="https://ehtishamoas.github.io/filmD2/" class="projectLink" id="weblink">Go to the Project Website</a>
+        <div class="instructions" id="insP4">
+          click on the pizza to see the project description
+        </div>
+        <div class="projectCanvas" id="project4Canvas">
+          <img src="images/pizza.png" alt="pizza image" class="movableObject" id="pizza">
+          <div class="projectDescription" id="project4Description">
+            <p class="desText">In this project, we made a film that tells the story of our campus east restaurant D2, which is well-known to everyone, yet most of the things about it fall behind the scenes. Our film includes some scenes showing certain places in D2 and some interviews of staff members and students sharing their thoughts and favorite memories of D2. We also created a d2-themed website to house our film and highlight the cool food offerings and issue of food wastage.</p>
+            <a href="https://github.com/ehtishamoas/filmD2" class="projectLink" id="docLink"> Find out more </a>
+          </div>
+          <img src="images/plate.png" alt="plate image" class="movableObject" id="plate">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="moreWork">
+      <a href="https://github.com/ehtishamoas" class="projectLink" id="gitLink">see more work</a>
+    </div>
+  </body>
+</html>
