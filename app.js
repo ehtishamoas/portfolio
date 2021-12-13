@@ -2,30 +2,33 @@
 
 $(document).ready(function(){
   $(".projectContainer").hide();
-  $(".projectDescription").hide();
-  $(".buttonWrap").hide();
-  $('#portfolioNavButton').hide();
+  $(".projectDescription").css({opacity: 0});
+  $(".buttonWrap").css({opacity: 0, visibility: "hidden"});
+  $("#portfolioNavButton").css("opacity", "0.3");
+  $("#portfolioNavButton").css("pointer-events", "none");
 });
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700 ) {
-    $('#portfolioNavButton').fadeIn(400);
+    $("#portfolioNavButton").css("opacity", "1");
+    $("#portfolioNavButton").css("pointer-events", "all");
   } else {
-    $('#portfolioNavButton').fadeOut(400);
+    $("#portfolioNavButton").css("opacity", "0.3");
+    $("#portfolioNavButton").css("pointer-events", "none");
   }
 }
 
 function fadePortfolioButton() {
-  $(".buttonWrap").fadeIn(800);
+  $(".buttonWrap").css({visibility: "visible"});
+  $(".buttonWrap").animate({opacity: 1}, 400);
 }
 
-setTimeout(fadePortfolioButton, 2700);
+setTimeout(fadePortfolioButton, 2200);
 
 $('#homeButton').click(function() {
-    $('html,body').animate({
-        scrollTop: $("#wrapper").offset().top},'slow');
+    $('html,body').animate({scrollTop: $("#wrapper").offset().top},'slow');
 });
 
 $('#portfolioButton').click(function() {
@@ -71,9 +74,9 @@ $('#portfolio').click(function() {
     $("#webVideo").css({"opacity": "0", "transition-delay": "1s"});
 
     $(".projectContainer").fadeOut(1000);
-    $(".projectDescription").hide();
-    $(".instructions").show();
-    $(".movableObject").animate({left: '0'}, 1000);
+    $(".projectDescription").css({opacity: 0});
+    $(".instructions").css({opacity: 1});
+    $(".movableObject").animate({top: '0', left: '0'}, 500);
     $("#axolotl").attr("src", "images/axolotl.png");
     $("#pizza").attr("src", "images/pizza.png");
     $("#ghost").attr("src", "images/ghost2.png");
@@ -97,10 +100,10 @@ $('#mff').click(function() {
   $("#project3Container").hide();
   $("#project4Container").hide();
   //eveything changes back to original position
-  $(".projectDescription").hide();
-  $(".instructions").show();
+  $(".projectDescription").css({opacity: 0});
+  $(".instructions").css({opacity: 1});
   //All movable things will animate back to origial position (during fade out)
-  $(".movableObject").animate({left: '0'}, 1000);
+  $(".movableObject").animate({top: '0', left: '0'}, 500);
   //All gifs will be changed back to pngs
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
@@ -130,9 +133,9 @@ $('#webComic').click(function() {
   $("#project1Container").hide();
   $("#project3Container").hide();
   $("#project4Container").hide();
-  $(".projectDescription").hide();
-  $(".instructions").show();
-  $(".movableObject").animate({left: '0'}, 1000);
+  $(".projectDescription").css({opacity: 0});
+  $(".instructions").css({opacity: 1});
+  $(".movableObject").animate({top: '0', left: '0'}, 500);
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -160,9 +163,9 @@ $('#webAudio').click(function() {
   $("#project2Container").hide();
   $("#project1Container").hide();
   $("#project4Container").hide();
-  $(".projectDescription").hide();
-  $(".instructions").show();
-  $(".movableObject").animate({left: '0'}, 1000);
+  $(".projectDescription").css({opacity: 0});
+  $(".instructions").css({opacity: 1});
+  $(".movableObject").animate({top: '0', left: '0'}, 200);
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -190,11 +193,9 @@ $('#webVideo').click(function() {
   $("#project2Container").hide();
   $("#project3Container").hide();
   $("#project1Container").hide();
-  $(".projectDescription").hide();
-  $(".instructions").show();
-  $("#axolotl").animate({bottom: '400px'}, 300);
-  $("#axolotl").delay(200).animate({left: '0', bottom: '0'}, 800);
-  $(".movableObject").animate({left: '0'}, 1000);
+  $(".projectDescription").css({opacity: 0});
+  $(".instructions").css({opacity: 1});
+  $(".movableObject").animate({top: '0', left: '0'}, 200);
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -221,24 +222,28 @@ $('#webVideo').click(function() {
 
 $('#hand1').click(function() {
   if (!handClicked) {
-    $("#hand1").animate({left: '1100px'}, 1000);
-    $("#project1Description").delay(500).fadeIn(1000);
-    $("#insP1").fadeOut(1000);
+    $("#hand1").animate({top: '550px', left: '-100px'}, 1000);
+    $("#hand2").animate({left: '100px'}, 1000);
+    $('html,body').animate({scrollTop: $("#project1Canvas").offset().top},1000);
+    $("#project1Description").delay(400).animate({opacity: 1}, 1000);
+    $("#insP1").animate({opacity: 0}, 200);
     handClicked = true;
   } else {
-    $("#hand1").animate({left: '0'}, 1000);
-    $("#project1Description").fadeOut(500);
-    $("#insP1").fadeIn(1000);
+    $("#hand1").animate({top: '0', left: '0'}, 1000);
+    $("#hand2").animate({left: '0'}, 1000);
+    $('html,body').animate({scrollTop: $("#project1Container").offset().top},1000);
+    $("#project1Description").animate({opacity: 0}, 500);
+    $("#insP1").animate({opacity: 1}, 1000);
     handClicked = false;
   }
 });
 
 $('#axolotl').click(function() {
   if (!fishClicked) {
-    $("#axolotl").animate({left: '1200px', bottom: '400px'}, 800);
-    $("#axolotl").delay(700).animate({bottom: '0'}, 200);
-    $("#project2Description").delay(400).fadeIn(1000);
-    $("#insP2").delay(500).fadeOut(1000);
+    $("#axolotl").animate({top: '650px'}, 1000);
+    $('html,body').animate({scrollTop: $("#project2Canvas").offset().top},1000);
+    $("#project2Description").delay(400).animate({opacity: 1}, 1000);
+    $("#insP2").animate({opacity: 0}, 200);
     $("#axolotl").attr("src", "images/axolotl.gif");
     $("#tank").css("cursor","pointer")
     fishClicked = true;
@@ -248,10 +253,10 @@ $('#axolotl').click(function() {
 $('#tank').click(function() {
   if (fishClicked) {
     $("#axolotl").attr("src", "images/axolotl.png");
-    $("#axolotl").animate({bottom: '400px'}, 300);
-    $("#axolotl").delay(200).animate({left: '0', bottom: '0'}, 800);
-    $("#project2Description").delay(400).fadeOut(800);
-    $("#insP2").delay(300).fadeIn(800);
+    $("#axolotl").animate({top: '0'}, 1000);
+    $('html,body').animate({scrollTop: $("#project2Container").offset().top},1000);
+    $("#project2Description").animate({opacity: 0}, 500);
+    $("#insP2").animate({opacity: 1}, 1000);
     $("#tank").css("cursor","default")
     fishClicked = false;
   }
@@ -260,15 +265,19 @@ $('#tank').click(function() {
 $('#ghost').click(function() {
   if (!ghostClicked) {
     $("#ghost").attr("src", "images/ghost.gif");
-    $("#ghost").animate({left: '1100px'}, 1000);
-    $("#project3Description").delay(500).fadeIn(1000);
-    $("#insP3").fadeOut(1000);
+    $("#ghost").animate({top: '550px', left: '-100px'}, 1000);
+    $("#radioGif").animate({left: '100px'}, 1000);
+    $('html,body').animate({scrollTop: $("#project3Canvas").offset().top},1000);
+    $("#project3Description").delay(400).animate({opacity: 1}, 1000);
+    $("#insP3").animate({opacity: 0}, 200);
     ghostClicked = true;
   } else {
     $("#ghost").attr("src", "images/ghost2.png");
-    $("#ghost").animate({left: '0'}, 1000);
-    $("#project3Description").fadeOut(500);
-    $("#insP3").fadeIn(1000);
+    $("#ghost").animate({top: '0', left: '0'}, 1000);
+    $("#radioGif").animate({left: '0'}, 1000);
+    $('html,body').animate({scrollTop: $("#project3Container").offset().top},1000);
+    $("#project3Description").animate({opacity: 0}, 500);
+    $("#insP3").animate({opacity: 1}, 1000);
     ghostClicked = false;
   }
 });
@@ -276,15 +285,17 @@ $('#ghost').click(function() {
 $('#pizza').click(function() {
   if (!pizzaClicked) {
     $("#pizza").attr("src", "images/pizza.gif");
-    $("#pizza").animate({left: '1300px'}, 1000);
-    $("#project4Description").delay(500).fadeIn(1000);
-    $("#insP4").fadeOut(1000);
+    $("#pizza").animate({top: '550px'}, 1000);
+    $('html,body').animate({scrollTop: $("#project4Canvas").offset().top},1000);
+    $("#project4Description").delay(400).animate({opacity: 1}, 1000);
+    $("#insP4").animate({opacity: 0}, 200);
     pizzaClicked = true;
   } else {
     $("#pizza").attr("src", "images/pizza.png");
-    $("#pizza").animate({left: '0'}, 1000);
-    $("#project4Description").fadeOut(500);
-    $("#insP4").fadeIn(1000);
+    $("#pizza").animate({top: '0'}, 1000);
+    $('html,body').animate({scrollTop: $("#project4Container").offset().top},1000);
+    $("#project4Description").animate({opacity: 0}, 1000);
+    $("#insP4").animate({opacity: 1}, 1000);
     pizzaClicked = false;
   }
 });
