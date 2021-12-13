@@ -236,24 +236,24 @@ function handClickFun() {
   if (!handClicked) {
 
     if (window.matchMedia("(max-width: 950px)").matches) { // If media query matches
-      $("#hand1").animate({top: '750px', left: '-100px'}, 1000);
+      $("#hand1").animate({top: '750px', left: '-100px'});
       $("#hand1").css("margin-top","-200px");
     } else {
       $("#hand1").css("margin-top","-100px");
-     $("#hand1").animate({top: '550px', left: '-100px'}, 1000);
+     $("#hand1").animate({top: '550px', left: '-100px'});
     }
-    $("#hand2").animate({left: '100px'}, 1000);
-    $('html,body').animate({scrollTop: $("#project1Canvas").offset().top},1000);
-    $("#project1Description").animate({opacity: 1}, 1000);
+    $("#hand2").animate({left: '100px'});
+    $('html,body').animate({scrollTop: $("#project1Canvas").offset().top});
+    $("#project1Description").animate({opacity: 1});
     $("#insP1").animate({opacity: 0}, 200);
     handClicked = true;
   } else {
     $("#hand1").css("margin-top","0");
-    $("#hand1").animate({top: '0', left: '0'}, 1000);
-    $("#hand2").animate({left: '0'}, 1000);
-    $('html,body').animate({scrollTop: $("#project1Container").offset().top},1000);
-    $("#project1Description").animate({opacity: 0}, 500);
-    $("#insP1").animate({opacity: 1}, 1000);
+    $("#hand1").animate({top: '0', left: '0'});
+    $("#hand2").animate({left: '0'});
+    $('html,body').animate({scrollTop: $("#project1Container").offset().top});
+    $("#project1Description").animate({opacity: 0});
+    $("#insP1").animate({opacity: 1});
     handClicked = false;
   }
 }
@@ -262,19 +262,19 @@ function axolotlClickFun() {
   if (!fishClicked) {
     $("#hand1").css("margin-top","-100px");
     if (window.matchMedia("(max-width: 750px)").matches) {
-      $("#axolotl").animate({top: '700px'}, 1000);
+      $("#axolotl").animate({top: '700px'});
       $("#axolotl").css("margin-top","-50px");
     } else if (window.matchMedia("(max-width: 950px)").matches) {
-    $("#axolotl").animate({top: '850px'}, 1000);
+    $("#axolotl").animate({top: '850px'});
     $("#axolotl").css("margin-top","-200px");
     } else {
       $("#axolotl").css("margin-top","-100px");
-     $("#axolotl").animate({top: '650px'}, 1000);
+     $("#axolotl").animate({top: '650px'});
     }
-    $('html,body').animate({scrollTop: $("#project2Canvas").offset().top},1000);
-    $("#project2Description").animate({opacity: 1}, 1000);
+    $('html,body').animate({scrollTop: $("#project2Canvas").offset().top});
+    $("#project2Description").animate({opacity: 1});
     $("#insP2").animate({opacity: 0}, 200);
-    $("#axolotl").attr("src", "images/axolotl2.png");
+    $("#axolotl").attr("src", "images/axolotl.gif");
     $("#tank").css("cursor","pointer")
     fishClicked = true;
   }
@@ -284,10 +284,10 @@ function tankClickFun() {
   if (fishClicked) {
     $("#axolotl").css("margin-top","0");
     $("#axolotl").attr("src", "images/axolotl.png");
-    $("#axolotl").animate({top: '0'}, 1000);
-    $('html,body').animate({scrollTop: $("#project2Container").offset().top},1000);
-    $("#project2Description").animate({opacity: 0}, 500);
-    $("#insP2").animate({opacity: 1}, 1000);
+    $("#axolotl").animate({top: '0'});
+    $('html,body').animate({scrollTop: $("#project2Container").offset().top});
+    $("#project2Description").animate({opacity: 0});
+    $("#insP2").animate({opacity: 1});
     $("#tank").css("cursor","default")
     fishClicked = false;
   }
@@ -295,56 +295,56 @@ function tankClickFun() {
 
 function ghostClickFun() {
   if (!ghostClicked) {
-    $("#ghost").attr("src", "images/ghost1.png");
+    $("#ghost").attr("src", "images/ghost.gif");
     if (window.matchMedia("(max-width: 950px)").matches) {
-      $("#ghost").animate({top: '750px', left: '-100px'}, 1000);
+      $("#ghost").animate({top: '750px', left: '-100px'});
       $("#ghost").css("margin-top","-200px");
     } else {
       $("#ghost").css("margin-top","-100px");
-     $("#ghost").animate({top: '550px', left: '-100px'}, 1000);
+     $("#ghost").animate({top: '550px', left: '-100px'});
     }
-    $("#radioGif").animate({left: '100px'}, 1000);
-    $('html,body').animate({scrollTop: $("#project3Canvas").offset().top},1000);
-    $("#project3Description").animate({opacity: 1}, 1000);
+    $("#radioGif").animate({left: '100px'});
+    $('html,body').animate({scrollTop: $("#project3Canvas").offset().top});
+    $("#project3Description").animate({opacity: 1});
     $("#insP3").animate({opacity: 0}, 200);
     ghostClicked = true;
   } else {
     $("#ghost").css("margin-top","0");
     $("#ghost").attr("src", "images/ghost2.png");
-    $("#ghost").animate({top: '0', left: '0'}, 1000);
-    $("#radioGif").animate({left: '0'}, 1000);
-    $('html,body').animate({scrollTop: $("#project3Container").offset().top},1000);
-    $("#project3Description").animate({opacity: 0}, 500);
-    $("#insP3").animate({opacity: 1}, 1000);
+    $("#ghost").animate({top: '0', left: '0'});
+    $("#radioGif").animate({left: '0'});
+    $('html,body').animate({scrollTop: $("#project3Container").offset().top});
+    $("#project3Description").animate({opacity: 0});
+    $("#insP3").animate({opacity: 1});
     ghostClicked = false;
   }
 }
 
 function pizzaClickFun() {
   if (!pizzaClicked) {
-    $("#pizza").attr("src", "images/pizza2.png");
+    $("#pizza").attr("src", "images/pizza.gif");
     if (window.matchMedia("(max-width: 950px)").matches) {
       $("#pizza").css("margin-top","-200px");
-      $("#pizza").animate({top: '750px'}, 1000);
+      $("#pizza").animate({top: '750px'});
     } else {
-     $("#pizza").animate({top: '550px'}, 1000);
+     $("#pizza").animate({top: '550px'});
      $("#pizza").css("margin-top","-100px");
     }
-    $('html,body').animate({scrollTop: $("#project4Canvas").offset().top},1000);
-    $("#project4Description").animate({opacity: 1}, 1000);
-    $("#insP4").animate({opacity: 0}, 200);
+    $('html,body').animate({scrollTop: $("#project4Canvas").offset().top});
+    $("#project4Description").animate({opacity: 1});
+    $("#insP4").animate({opacity: 0});
     pizzaClicked = true;
   } else {
     $("#pizza").css("margin-top","0");
     $("#pizza").attr("src", "images/pizza.png");
-    $("#pizza").animate({top: '0'}, 1000);
-    $('html,body').animate({scrollTop: $("#project4Container").offset().top},1000);
-    $("#project4Description").animate({opacity: 0}, 1000);
-    $("#insP4").animate({opacity: 1}, 1000);
+    $("#pizza").animate({top: '0'});
+    $('html,body').animate({scrollTop: $("#project4Container").offset().top});
+    $("#project4Description").animate({opacity: 0});
+    $("#insP4").animate({opacity: 1});
     pizzaClicked = false;
   }
 }
-//Could have called directly but I was learning about how to pass arguments etc. so I used this way...
+
 $('#hand1').click(handClickFun);
 $('#axolotl').click(axolotlClickFun);
 $('#tank').click(tankClickFun);
@@ -352,5 +352,5 @@ $('#ghost').click(ghostClickFun);
 $('#pizza').click(pizzaClickFun);
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------
-//Thank you for reading the code! Would love suggestions on how to make it more optimized so that low-end devices could handle it as well
+//Thank you for reading the code! Would love suggestions on how to make it more optimized so that low-end devices could handle it well
 -----------------------------------------------------------------------------------------------------------------------------------------*/
