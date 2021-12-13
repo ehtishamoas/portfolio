@@ -75,7 +75,7 @@ $('#portfolio').click(function() {
     $(".projectContainer").fadeOut(1000);
     $(".projectDescription").css({opacity: 0});
     $(".instructions").css({opacity: 1});
-    $(".movableObject").animate({top: '0', left: '0'}, 500);
+    $(".movableObject").css({top: '0', left: '0'});
     $("#axolotl").attr("src", "images/axolotl.png");
     $("#pizza").attr("src", "images/pizza.png");
     $("#ghost").attr("src", "images/ghost2.png");
@@ -101,8 +101,8 @@ $('#mff').click(function() {
   //eveything changes back to original position
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
-  //All movable things will animate back to origial position (during fade out)
-  $(".movableObject").animate({top: '0', left: '0'}, 500);
+  //All movable things will go back to origial position during fade out
+  $(".movableObject").css({top: '0', left: '0'});
   //All gifs will be changed back to pngs
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
@@ -134,7 +134,7 @@ $('#webComic').click(function() {
   $("#project4Container").hide();
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
-  $(".movableObject").animate({top: '0', left: '0'}, 500);
+  $(".movableObject").css({top: '0', left: '0'});
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -164,7 +164,7 @@ $('#webAudio').click(function() {
   $("#project4Container").hide();
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
-  $(".movableObject").animate({top: '0', left: '0'}, 200);
+  $(".movableObject").css({top: '0', left: '0'});
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -194,7 +194,7 @@ $('#webVideo').click(function() {
   $("#project1Container").hide();
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
-  $(".movableObject").animate({top: '0', left: '0'}, 200);
+  $(".movableObject").css({top: '0', left: '0'});
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -230,7 +230,7 @@ function handClickFun() {
     }
     $("#hand2").animate({left: '100px'}, 1000);
     $('html,body').animate({scrollTop: $("#project1Canvas").offset().top},1000);
-    $("#project1Description").delay(400).animate({opacity: 1}, 1000);
+    $("#project1Description").animate({opacity: 1}, 1000);
     $("#insP1").animate({opacity: 0}, 200);
     handClicked = true;
   } else {
@@ -258,7 +258,7 @@ function axolotlClickFun() {
      $("#axolotl").animate({top: '650px'}, 1000);
     }
     $('html,body').animate({scrollTop: $("#project2Canvas").offset().top},1000);
-    $("#project2Description").delay(400).animate({opacity: 1}, 1000);
+    $("#project2Description").animate({opacity: 1}, 1000);
     $("#insP2").animate({opacity: 0}, 200);
     $("#axolotl").attr("src", "images/axolotl.gif");
     $("#tank").css("cursor","pointer")
@@ -291,7 +291,7 @@ function ghostClickFun() {
     }
     $("#radioGif").animate({left: '100px'}, 1000);
     $('html,body').animate({scrollTop: $("#project3Canvas").offset().top},1000);
-    $("#project3Description").delay(400).animate({opacity: 1}, 1000);
+    $("#project3Description").animate({opacity: 1}, 1000);
     $("#insP3").animate({opacity: 0}, 200);
     ghostClicked = true;
   } else {
@@ -317,7 +317,7 @@ function pizzaClickFun() {
      $("#pizza").css("margin-top","-100px");
     }
     $('html,body').animate({scrollTop: $("#project4Canvas").offset().top},1000);
-    $("#project4Description").delay(400).animate({opacity: 1}, 1000);
+    $("#project4Description").animate({opacity: 1}, 1000);
     $("#insP4").animate({opacity: 0}, 200);
     pizzaClicked = true;
   } else {
