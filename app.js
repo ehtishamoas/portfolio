@@ -274,7 +274,7 @@ function axolotlClickFun() {
     $('html,body').animate({scrollTop: $("#project2Canvas").offset().top},1000);
     $("#project2Description").animate({opacity: 1}, 1000);
     $("#insP2").animate({opacity: 0}, 200);
-    $("#axolotl").attr("src", "images/axolotl.gif");
+    $("#axolotl").attr("src", "images/axolotl2.png");
     $("#tank").css("cursor","pointer")
     fishClicked = true;
   }
@@ -295,7 +295,7 @@ function tankClickFun() {
 
 function ghostClickFun() {
   if (!ghostClicked) {
-    $("#ghost").attr("src", "images/ghost.gif");
+    $("#ghost").attr("src", "images/ghost1.png");
     if (window.matchMedia("(max-width: 950px)").matches) {
       $("#ghost").animate({top: '750px', left: '-100px'}, 1000);
       $("#ghost").css("margin-top","-200px");
@@ -322,7 +322,7 @@ function ghostClickFun() {
 
 function pizzaClickFun() {
   if (!pizzaClicked) {
-    $("#pizza").attr("src", "images/pizza.gif");
+    $("#pizza").attr("src", "images/pizza2.png");
     if (window.matchMedia("(max-width: 950px)").matches) {
       $("#pizza").css("margin-top","-200px");
       $("#pizza").animate({top: '750px'}, 1000);
