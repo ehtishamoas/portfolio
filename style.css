@@ -498,7 +498,6 @@ input[type="checkbox"]:checked ~ div {
   height: 200px;
   position: relative;
   cursor: pointer;
-  z-index: 10;
 }
 
 #hand2 {
@@ -509,7 +508,7 @@ input[type="checkbox"]:checked ~ div {
 #tank {
   width: 500px;
   height: 400px;
-  z-index: 10;
+  z-index: 100;
   cursor: default;
 }
 
@@ -522,6 +521,7 @@ input[type="checkbox"]:checked ~ div {
   width: 200px;
   height: 200px;
   cursor: default;
+  z-index: -1;
 }
 
 .moreWork{
@@ -724,7 +724,7 @@ input[type="checkbox"]:checked ~ div {
   .portfolioText {
     font-size: 14px;
   }
-  
+
   .projectsGrid {
     margin-bottom: 300px;
   }

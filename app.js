@@ -103,6 +103,7 @@ $('#mff').click(function() {
   $(".instructions").css({opacity: 1});
   //All movable things will go back to origial position during fade out
   $(".movableObject").css({top: '0', left: '0'});
+  $(".movableObject").css("margin-top","0");
   //All gifs will be changed back to pngs
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
@@ -135,6 +136,7 @@ $('#webComic').click(function() {
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
   $(".movableObject").css({top: '0', left: '0'});
+  $(".movableObject").css("margin-top","0");
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -165,6 +167,7 @@ $('#webAudio').click(function() {
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
   $(".movableObject").css({top: '0', left: '0'});
+  $(".movableObject").css("margin-top","0");
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
@@ -195,6 +198,7 @@ $('#webVideo').click(function() {
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
   $(".movableObject").css({top: '0', left: '0'});
+  $(".movableObject").css("margin-top","0");
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
