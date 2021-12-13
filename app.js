@@ -1,4 +1,4 @@
-
+/*set all the properties to desired beginning values*/
 $(document).ready(function(){
   $(".projectContainer").hide();
   $(".projectDescription").css({opacity: 0});
@@ -7,6 +7,8 @@ $(document).ready(function(){
   $("#portfolioNavButton").css("pointer-events", "none");
 });
 
+/*makes portfolio button in nav bar usable if user goes beyond portfolio div*/
+/*second button is mainly designed to come back to portfolio menu from any project without scrolling*/
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -18,7 +20,7 @@ function scrollFunction() {
     $("#portfolioNavButton").css("pointer-events", "none");
   }
 }
-
+//fades in the button after typewriter animation has finished writing *code*
 function fadePortfolioButton() {
   $(".buttonWrap").css({visibility: "visible"});
   $(".buttonWrap").animate({opacity: 1}, 400);
@@ -26,6 +28,7 @@ function fadePortfolioButton() {
 
 setTimeout(fadePortfolioButton, 2000);
 
+//Navigation buttons. Didn't using scrollTop instead of anchor as some browsers do not support 'smooth behaviour' css property
 $('#homeButton').click(function() {
     $('html,body').animate({scrollTop: $("#wrapper").offset().top},'slow');
 });
@@ -51,7 +54,7 @@ var fishClicked = false;
 var ghostClicked = false;
 var pizzaClicked = false;
 
-
+//animations and effects of main portfolio menu icon from 3d menu
 $('#portfolio').click(function() {
 	if (!portfolioClicked){
   	$("#portfolioContainer").css({"perspective": "1000px", "transition": "all 1.3s ease-in", "transform": "perspective(10000px) rotateX(0deg)"});
@@ -72,6 +75,7 @@ $('#portfolio').click(function() {
     $("#mff").css({"opacity": "0", "transition-delay": "1s"});
     $("#webVideo").css({"opacity": "0", "transition-delay": "1s"});
 
+    //on clicking again, it resets all the things changed during interactivity back to their default position
     $(".projectContainer").fadeOut(1000);
     $(".projectDescription").css({opacity: 0});
     $(".instructions").css({opacity: 1});
@@ -92,12 +96,12 @@ $('#portfolio').click(function() {
   }
 });
 
-
+//When film premiere site button is clicked
 $('#mff').click(function() {
   //All other project containers will be hidden
-  $("#project2Container").hide();
-  $("#project3Container").hide();
-  $("#project4Container").hide();
+  $("#project2Container").css("display","none");
+  $("#project3Container").css("display","none");
+  $("#project4Container").css("display","none");
   //eveything changes back to original position
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
@@ -108,6 +112,7 @@ $('#mff').click(function() {
   $("#axolotl").attr("src", "images/axolotl.png");
   $("#pizza").attr("src", "images/pizza.png");
   $("#ghost").attr("src", "images/ghost2.png");
+  //every clicked flag will become false
   handClicked = false;
   fishClicked = false;
   ghostClicked = false;
@@ -121,18 +126,19 @@ $('#mff').click(function() {
     mffClicked = false;
 
   } else {
-    $("#project1Container").fadeIn(1000);
+    $("#project1Container").fadeIn(1000); //corresponding project shows up if button wasn't clicked previously
     mffClicked = true;
-    $('html,body').animate({
+    $('html,body').animate({              //Scroll to the project
         scrollTop: $("#project1Container").offset().top},
         'slow');
   }
 });
 
+//The procedures are essesntially the same for other projects icons
 $('#webComic').click(function() {
-  $("#project1Container").hide();
-  $("#project3Container").hide();
-  $("#project4Container").hide();
+  $("#project1Container").css("display","none");
+  $("#project3Container").css("display","none");
+  $("#project4Container").css("display","none");
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
   $(".movableObject").css({top: '0', left: '0'});
@@ -161,9 +167,9 @@ $('#webComic').click(function() {
 });
 
 $('#webAudio').click(function() {
-  $("#project2Container").hide();
-  $("#project1Container").hide();
-  $("#project4Container").hide();
+  $("#project2Container").css("display","none");
+  $("#project1Container").css("display","none");
+  $("#project4Container").css("display","none");
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
   $(".movableObject").css({top: '0', left: '0'});
@@ -192,9 +198,9 @@ $('#webAudio').click(function() {
 });
 
 $('#webVideo').click(function() {
-  $("#project2Container").hide();
-  $("#project3Container").hide();
-  $("#project1Container").hide();
+  $("#project2Container").css("display","none");
+  $("#project3Container").css("display","none");
+  $("#project1Container").css("display","none");
   $(".projectDescription").css({opacity: 0});
   $(".instructions").css({opacity: 1});
   $(".movableObject").css({top: '0', left: '0'});
@@ -222,6 +228,10 @@ $('#webVideo').click(function() {
   }
 });
 
+
+//Now comes the interactivity part!!
+//These functions animate the interactive object like hand, axolotl etc to and fro on clicks by adding offsets to top and/or left
+//They also shows prject description and github kink on interactivity. Instructions about that are given to the users before the canvas starts.
 function handClickFun() {
   if (!handClicked) {
 
@@ -334,9 +344,13 @@ function pizzaClickFun() {
     pizzaClicked = false;
   }
 }
-
+//Could have called directly but I was learning about how to pass arguments etc. so I used this way...
 $('#hand1').click(handClickFun);
 $('#axolotl').click(axolotlClickFun);
 $('#tank').click(tankClickFun);
 $('#ghost').click(ghostClickFun);
 $('#pizza').click(pizzaClickFun);
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------
+//Thank you for reading the code! Would love suggestions on how to make it more optimized so that low-end devices could handle it as well
+-----------------------------------------------------------------------------------------------------------------------------------------*/
