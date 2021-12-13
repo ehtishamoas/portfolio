@@ -6,12 +6,12 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> <!-- for social Media icons -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jquery_3.6.0.js"></script>
     <script type="text/javascript" src="app.js" defer></script>
   </head>
   <body>
 
-<!---Social Media Icons ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---Top nav bar with home and portflio buttons and Social Media Icons ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="topNav">
       <div class="navButtons">
@@ -116,7 +116,7 @@
 
     </div>
 
-<!---Portfolio ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---Portfolio 3d menu----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div class="portfolioWrapper" id="portfolioWrapper">
       <div class="portfolioContainer" id="portfolioContainer">
         <div class="projectIcons" id="mff">
@@ -138,9 +138,11 @@
       </div>
     </div>
 
-
+    <!---Projects (layered on top of each other using grid layout with display set to none/ hidden by jquery hide())----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="projectsGrid" id="projectsGrid">
+
+  <!---Project 1----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
       <div class="projectContainer" id="project1Container">
         <p class="projectTitle" id="mffTitle"> Lending a Hand </p>
@@ -158,6 +160,7 @@
         </div>
       </div>
 
+  <!---Project 2----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
       <div class="projectContainer" id="project2Container">
@@ -176,6 +179,7 @@
         </div>
       </div>
 
+<!---Project 3----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
       <div class="projectContainer" id="project3Container">
@@ -194,6 +198,7 @@
         </div>
       </div>
 
+  <!---Project 4----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
       <div class="projectContainer" id="project4Container">
@@ -213,6 +218,7 @@
       </div>
 
     </div>
+    <!---Link to more work----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="moreWork">
       <a href="https://github.com/ehtishamoas" class="projectLink" id="gitLink">see more work</a>
