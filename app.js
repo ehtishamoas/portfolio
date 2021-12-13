@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
   $(".projectContainer").hide();
   $(".projectDescription").css({opacity: 0});
@@ -25,7 +24,7 @@ function fadePortfolioButton() {
   $(".buttonWrap").animate({opacity: 1}, 400);
 }
 
-setTimeout(fadePortfolioButton, 2200);
+setTimeout(fadePortfolioButton, 2000);
 
 $('#homeButton').click(function() {
     $('html,body').animate({scrollTop: $("#wrapper").offset().top},'slow');
@@ -219,16 +218,23 @@ $('#webVideo').click(function() {
   }
 });
 
-
-$('#hand1').click(function() {
+function handClickFun() {
   if (!handClicked) {
-    $("#hand1").animate({top: '550px', left: '-100px'}, 1000);
+
+    if (window.matchMedia("(max-width: 950px)").matches) { // If media query matches
+      $("#hand1").animate({top: '750px', left: '-100px'}, 1000);
+      $("#hand1").css("margin-top","-200px");
+    } else {
+      $("#hand1").css("margin-top","-100px");
+     $("#hand1").animate({top: '550px', left: '-100px'}, 1000);
+    }
     $("#hand2").animate({left: '100px'}, 1000);
     $('html,body').animate({scrollTop: $("#project1Canvas").offset().top},1000);
     $("#project1Description").delay(400).animate({opacity: 1}, 1000);
     $("#insP1").animate({opacity: 0}, 200);
     handClicked = true;
   } else {
+    $("#hand1").css("margin-top","0");
     $("#hand1").animate({top: '0', left: '0'}, 1000);
     $("#hand2").animate({left: '0'}, 1000);
     $('html,body').animate({scrollTop: $("#project1Container").offset().top},1000);
@@ -236,11 +242,21 @@ $('#hand1').click(function() {
     $("#insP1").animate({opacity: 1}, 1000);
     handClicked = false;
   }
-});
+}
 
-$('#axolotl').click(function() {
+function axolotlClickFun() {
   if (!fishClicked) {
-    $("#axolotl").animate({top: '650px'}, 1000);
+    $("#hand1").css("margin-top","-100px");
+    if (window.matchMedia("(max-width: 750px)").matches) {
+      $("#axolotl").animate({top: '700px'}, 1000);
+      $("#axolotl").css("margin-top","-50px");
+    } else if (window.matchMedia("(max-width: 950px)").matches) {
+    $("#axolotl").animate({top: '850px'}, 1000);
+    $("#axolotl").css("margin-top","-200px");
+    } else {
+      $("#axolotl").css("margin-top","-100px");
+     $("#axolotl").animate({top: '650px'}, 1000);
+    }
     $('html,body').animate({scrollTop: $("#project2Canvas").offset().top},1000);
     $("#project2Description").delay(400).animate({opacity: 1}, 1000);
     $("#insP2").animate({opacity: 0}, 200);
@@ -248,10 +264,11 @@ $('#axolotl').click(function() {
     $("#tank").css("cursor","pointer")
     fishClicked = true;
   }
-});
+}
 
-$('#tank').click(function() {
+function tankClickFun() {
   if (fishClicked) {
+    $("#axolotl").css("margin-top","0");
     $("#axolotl").attr("src", "images/axolotl.png");
     $("#axolotl").animate({top: '0'}, 1000);
     $('html,body').animate({scrollTop: $("#project2Container").offset().top},1000);
@@ -260,18 +277,25 @@ $('#tank').click(function() {
     $("#tank").css("cursor","default")
     fishClicked = false;
   }
-});
+}
 
-$('#ghost').click(function() {
+function ghostClickFun() {
   if (!ghostClicked) {
     $("#ghost").attr("src", "images/ghost.gif");
-    $("#ghost").animate({top: '550px', left: '-100px'}, 1000);
+    if (window.matchMedia("(max-width: 950px)").matches) {
+      $("#ghost").animate({top: '750px', left: '-100px'}, 1000);
+      $("#ghost").css("margin-top","-200px");
+    } else {
+      $("#ghost").css("margin-top","-100px");
+     $("#ghost").animate({top: '550px', left: '-100px'}, 1000);
+    }
     $("#radioGif").animate({left: '100px'}, 1000);
     $('html,body').animate({scrollTop: $("#project3Canvas").offset().top},1000);
     $("#project3Description").delay(400).animate({opacity: 1}, 1000);
     $("#insP3").animate({opacity: 0}, 200);
     ghostClicked = true;
   } else {
+    $("#ghost").css("margin-top","0");
     $("#ghost").attr("src", "images/ghost2.png");
     $("#ghost").animate({top: '0', left: '0'}, 1000);
     $("#radioGif").animate({left: '0'}, 1000);
@@ -280,17 +304,24 @@ $('#ghost').click(function() {
     $("#insP3").animate({opacity: 1}, 1000);
     ghostClicked = false;
   }
-});
+}
 
-$('#pizza').click(function() {
+function pizzaClickFun() {
   if (!pizzaClicked) {
     $("#pizza").attr("src", "images/pizza.gif");
-    $("#pizza").animate({top: '550px'}, 1000);
+    if (window.matchMedia("(max-width: 950px)").matches) {
+      $("#pizza").css("margin-top","-200px");
+      $("#pizza").animate({top: '750px'}, 1000);
+    } else {
+     $("#pizza").animate({top: '550px'}, 1000);
+     $("#pizza").css("margin-top","-100px");
+    }
     $('html,body').animate({scrollTop: $("#project4Canvas").offset().top},1000);
     $("#project4Description").delay(400).animate({opacity: 1}, 1000);
     $("#insP4").animate({opacity: 0}, 200);
     pizzaClicked = true;
   } else {
+    $("#pizza").css("margin-top","0");
     $("#pizza").attr("src", "images/pizza.png");
     $("#pizza").animate({top: '0'}, 1000);
     $('html,body').animate({scrollTop: $("#project4Container").offset().top},1000);
@@ -298,4 +329,10 @@ $('#pizza').click(function() {
     $("#insP4").animate({opacity: 1}, 1000);
     pizzaClicked = false;
   }
-});
+}
+
+$('#hand1').click(handClickFun);
+$('#axolotl').click(axolotlClickFun);
+$('#tank').click(tankClickFun);
+$('#ghost').click(ghostClickFun);
+$('#pizza').click(pizzaClickFun);

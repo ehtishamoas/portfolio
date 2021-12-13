@@ -100,6 +100,7 @@ body {
   border: 3px solid #fff; /*change this for mobile*/
   z-index: 1;
   margin: 0 10px; /*change for mobile*/
+  padding: 0;
 }
 
 .socialMedia  li a .icon {
@@ -150,7 +151,9 @@ body {
 /*--------------------------------------------------------------------------------------------------------*/
 /*Home page*/
 /*--------------------------------------------------------------------------------------------------------*/
-
+.wrapper{
+  padding-bottom: 100px;
+}
 .htmlContainer1{
   padding-top: 100px; /*change for mobile*/
 }
@@ -162,14 +165,12 @@ body {
 }
 
 #typewriter {
-  width: 84ch;
-  animation: typing 2s steps(84), blink .5s step-end infinite alternate;
+  width: 35ch;
+  animation: typing 2s steps(35), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
-  font-size: 20px; /*change for mobile*/
-  margin-left: 100px;
+  padding-left: 200px; /*change for mobile*/
 }
 
 @keyframes typing {
@@ -208,11 +209,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .nameLetters {
   position: relative;
   display: flex;
+  padding: 0;
 }
 
 li {
@@ -286,7 +290,7 @@ input[type="checkbox"]:checked ~ div {
   transform-style: preserve-3d;
 }
 
-.webComic, .portfolio, .webAudio, .mff, .webVideo {
+.projectIcons {
   width: 200px;                             /*Change for Mobile*/
   height: 150px;                            /*Change for Mobile*/
   transform-style: preserve-3d;
@@ -303,7 +307,7 @@ input[type="checkbox"]:checked ~ div {
   background-color: #58d;
   cursor: pointer;
 }
-.webComic:hover, .portfolio:hover, .webAudio:hover, .mff:hover, .webVideo:hover {
+#webComic:hover, #portfolio:hover, #webAudio:hover, #mff:hover, #webVideo:hover {
   box-shadow: 0 0 30px 10px rgba(100, 100, 255, 0.6);
   background-color: #ccf;
 }
@@ -319,30 +323,30 @@ input[type="checkbox"]:checked ~ div {
   color: #fff;
   text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
 }
- /* translations maybe smaller for mobile*/
-.mff {
+
+#mff {
   transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
   background-image: url(images/heart.png);
 }
 
-.webComic {
+#webComic {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
   background-image: url(images/comic.png);
 }
 
-.portfolio {
+#portfolio {
   opacity: 1;
   transition-delay: 0s;
   z-index: 10;
   background-image: url(images/portfolioIcon.png);
 }
 
-.webAudio {
+#webAudio {
   transform: translateX(30px) translateZ(-25px) rotateY(5deg);
   background-image: url(images/radio.png);
 }
 
-.webVideo {
+#webVideo {
   transform: translateX(60px) translateZ(-50px) rotateY(10deg);
   background-image: url(images/camera.png);
 }
@@ -554,4 +558,250 @@ input[type="checkbox"]:checked ~ div {
   justify-content: center;
   font-size: 40px; /*change for mobile*/
   margin-bottom: 200px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+
+  .code{
+    padding-left: 50px; /*maybe change for mobile*/
+  }
+
+  #typewriter {
+    padding-left: 120px;
+  }
+
+  #portfolioButton{
+    width: 100px; /*change for mobile*/
+    height: 50px; /*change for mobile*/
+    font-size: 22px; /*change for mobile*/
+  }
+
+  input[type="checkbox"] {
+    height: 70px; /*change for mobile*/
+    width: 70px; /*change for mobile*/
+  }
+
+  .letter {
+    height: 70px; /*change for mobile*/
+    width: 70px;  /*change for mobile*/
+    font-size: 40px;  /*change for mobile*/
+  }
+
+  .projectIcons {
+    width: 160px;                             /*Change for Mobile*/
+    height: 130px;
+  }
+
+  .explainer {
+    font-weight: 250;
+    font-size: 2rem;   /*Change for Mobile maybe?*/
+  }
+
+  #weblink{
+    font-size: 18px; /*Change for Mobile*/
+  }
+  #docLink{
+    font-size: 18px; /*Change for Mobile*/
+  }
+}
+
+@media only screen and (max-width: 950px) {
+
+  .code{
+    font-size: 16px; /*change for mobile*/
+    padding-left: 30px;
+  }
+
+  #portfolioButton{
+    width: 80px; /*change for mobile*/
+    height: 40px; /*change for mobile*/
+    font-size: 18px; /*change for mobile*/
+  }
+
+  input[type="checkbox"] {
+    height: 60px; /*change for mobile*/
+    width: 60px; /*change for mobile*/
+  }
+
+  .letter {
+    height: 60px; /*change for mobile*/
+    width: 60px;  /*change for mobile*/
+    font-size: 34px;  /*change for mobile*/
+  }
+
+  .projectIcons {
+    width: 120px;
+    height: 100px;                             /*Change for Mobile*/
+  }
+  .portfolioText { /*Change font size maybe for  Mobile*/
+    font-size: 14px;
+  }
+
+  .explainer {
+    font-weight: 250;
+    font-size: 2rem;   /*Change for Mobile maybe?*/
+  }
+
+  .projectDescription {
+    width: 500px; /*Change for Mobile*/
+    height: 500px; /*Change for Mobile*/
+    font-size: 18px;  /*Change for Mobile*/
+  }
+
+  #weblink{
+    font-size: 18px; /*Change for Mobile*/
+  }
+  #docLink{
+    font-size: 18px; /*Change for Mobile*/
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navButtons{
+    grid-column-gap: 10px; /*change for mobile*/
+    margin-left: 20px; /*change for mobile*/
+  }
+
+  #homeButton{
+    width: 50px; /*change for mobile*/
+    height: 30px; /*change for mobile*/
+    font-size: 14px; /*change for mobile*/
+    border-radius: 10px;
+  }
+
+  #portfolioNavButton{
+    width: 60px; /*change for mobile*/
+    height: 30px; /*change for mobile*/
+    font-size: 14px; /*change for mobile*/
+    border-radius: 10px;
+  }
+  /*cicles ain't equal so maybe use width height and change for mobile?*/
+  .socialMedia  li a {
+    width: 30px;/*change this for mobile*/
+    height: 30px;/*change this for mobile*/
+    font-size: 20px;/*change this for mobile*/
+    border: 2px solid #fff; /*change this for mobile*/
+    margin: 0 4px; /*change for mobile*/
+    padding: 0;
+  }
+
+  .code{
+    padding-left: 10px; /*maybe change for mobile*/
+    font-size: 12px; /*change for mobile*/
+  }
+
+  #typewriter {
+    padding-left: 50px;
+  }
+
+  #portfolioButton{
+    width: 60px; /*change for mobile*/
+    height: 30px; /*change for mobile*/
+    font-size: 14px; /*change for mobile*/
+  }
+
+
+  input[type="checkbox"] {
+    height: 30px; /*change for mobile*/
+    width: 30px; /*change for mobile*/
+  }
+
+  .letter {
+    position: relative;
+    height: 30px; /*change for mobile*/
+    width: 30px;  /*change for mobile*/
+    font-size: 20px;  /*change for mobile*/
+    border-radius: 10px;
+  }
+
+  .projectIcons {
+    width: 120px;                             /*Change for Mobile*/
+    height: 100px;
+  }
+  .portfolioText { /*Change font size maybe for  Mobile*/
+    font-size: 14px;
+  }
+
+  .explainer {
+    font-weight: 250;
+    font-size: 2rem;   /*Change for Mobile maybe?*/
+  }
+
+
+  .projectsGrid {
+    margin-bottom: 300px;  /*Change for Mobile*/
+  }
+
+  .projectTitle{
+    font-size: 40px; /*Change for Mobile*/
+  }
+  #weblink{
+    margin-top: 50px;/*Change for Mobile*/
+    margin-bottom: 120px;/*Change for Mobile*/
+    font-size: 16px; /*Change for Mobile*/
+  }
+  #docLink{
+    font-size: 16px; /*Change for Mobile*/
+  }
+
+  .instructions {
+    font-size: 14px;  /*Change for Mobile*/
+    margin-bottom: 100px; /*Change for Mobile*/
+  }
+  .projectDescription {
+    width: 300px; /*Change for Mobile*/
+    height: 500px; /*Change for Mobile*/
+    font-size: 16px;  /*Change for Mobile*/
+  }
+
+  #hand1 {
+    width: 150px;  /*Change for Mobile*/
+    height: 150px; /*Change for Mobile*/
+  }
+
+  #hand2 {
+    width: 150px;  /*Change for Mobile*/
+    height: 150px;  /*Change for Mobile*/
+  }
+
+  #axolotl {
+    width: 100px;   /*Change for Mobile*/
+    height: 100px;  /*Change for Mobile*/
+  }
+
+  #tank {
+    width: 250px;  /*Change for Mobile*/
+    height: 200px;  /*Change for Mobile*/
+  }
+
+
+  #ghost {
+    width: 150px;  /*Change for Mobile*/
+    height: 150px; /*Change for Mobile*/
+  }
+
+  #radioGif {
+    width: 150px;  /*Change for Mobile*/
+    height: 150px;  /*Change for Mobile*/
+  }
+
+  #pizza {
+    width: 150px;  /*Change for Mobile*/
+    height: 150px; /*Change for Mobile*/
+  }
+
+  #plate {
+    width: 150px;  /*Change for Mobile*/
+    height: 150px;  /*Change for Mobile*/
+  }
+
+  .moreWork{
+    font-size: 34px; /*change for mobile*/
+  }
+
 }
