@@ -7,19 +7,6 @@ $(document).ready(function(){
   $("#portfolioNavButton").css("pointer-events", "none");
 });
 
-/*makes portfolio button in nav bar usable if user goes beyond portfolio div*/
-/*second button is mainly designed to come back to portfolio menu from any project without scrolling*/
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700 ) {
-    $("#portfolioNavButton").css("opacity", "1");
-    $("#portfolioNavButton").css("pointer-events", "all");
-  } else {
-    $("#portfolioNavButton").css("opacity", "0.3");
-    $("#portfolioNavButton").css("pointer-events", "none");
-  }
-}
 //fades in the button after typewriter animation has finished writing *code*
 function fadePortfolioButton() {
   $(".buttonWrap").css({visibility: "visible"});
